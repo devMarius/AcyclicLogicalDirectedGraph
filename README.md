@@ -1,0 +1,2 @@
+# AcyclicLogicalDirectedGraph
+class AcyclicLogicalDirectedGraph (js)
