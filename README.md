@@ -102,5 +102,13 @@ let graph = AcyclicLogicalDirectedGraph.fromMermaid(mermaid);
 console.log(graph.calculateVertexSmartDepthMap()); // Show the strength (depth) of logically dependent vertexes 
 //...
 
+mapOfVertexNamesWithTheirSmartDepth = new Map(
+  [...graph.calculateVertexSmartDepthMap().entries()]
+    .filter((e) => !e[0].includes('AND') && !e[0].includes('OR'))
+    .map((e) => [graph.mermaidMap.get(e[0]), e[1]])
+    .sort((a, b) => b[1] - a[1])
+)
+
+//...
 console.log(graph.toMermaid()); // Convert instance of AcyclicLogicalDirectedGraph to mermaid string
 ```
