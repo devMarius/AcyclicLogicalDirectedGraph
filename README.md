@@ -99,7 +99,7 @@ let mermaid = `graph LR
 `;
 
 let graph = AcyclicLogicalDirectedGraph.fromMermaid(mermaid);
-console.log(graph.calculateVertexSmartDepth()); // Show the strength (depth) of logically dependent vertexes 
+console.log(graph.calculateVertexSmartDepthMap()); // Show the strength (depth) of logically dependent vertexes 
 //...
 
 console.log(graph.toMermaid()); // Convert instance of AcyclicLogicalDirectedGraph to mermaid string
